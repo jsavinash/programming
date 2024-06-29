@@ -1,4 +1,4 @@
-package com.data_structures.hashing.open_addressing.linear_probing;
+package com.data_structures.hashing.open_addressing;
 
 
 class LinearProbingHashing {
