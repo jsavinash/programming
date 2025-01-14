@@ -1,0 +1,24 @@
+{
+  "name": "basic-concepts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently --kill-others \"npm run webpack-dev\" \"npm run nodmon-run\"",
+    "webpack-dev": "webpack --watch --config webpack.config.js",
+    "nodmon-run": "nodemon ./dist/bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-loader": "^9.2.1",
+    "concurrently": "^9.1.2",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
