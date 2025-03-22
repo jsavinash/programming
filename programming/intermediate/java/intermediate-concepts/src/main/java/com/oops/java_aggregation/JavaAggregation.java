@@ -1,6 +1,7 @@
 package com.oops.java_aggregation;
 
 //Aggregation :- Car can exist with or without wheel.
+//has-a relationship
 public class JavaAggregation {
     public static void main(String[] args) {
         Car car = new Car("Tata");
