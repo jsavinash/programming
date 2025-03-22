@@ -1,0 +1,119 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "JavaInstanceInitializerBlock",
+            "request": "launch",
+            "mainClass": "com.oops.java_instance_initializer_block.JavaInstanceInitializerBlock",
+            "projectName": "oops-concepts"
+        },
+        {
+            "type": "java",
+            "name": "JavaSuperDerived",
+            "request": "launch",
+            "mainClass": "com.oops.java_super.JavaSuperDerived",
+            "projectName": "oops-concepts"
+        },
+        {
+            "type": "java",
+            "name": "JavaCovariantReturnTypeDerived",
+            "request": "launch",
+            "mainClass": "com.oops.java_polymorphism.java_covariant_return_type.JavaCovariantReturnTypeDerived",
+            "projectName": "oops-concepts"
+        },
+        {
+            "type": "java",
+            "name": "JavaMethodOverridingDerived",
+            "request": "launch",
+            "mainClass": "com.oops.java_polymorphism.method_overriding.JavaMethodOverridingDerived",
+            "projectName": "oops-concepts"
+        },
+        {
+            "type": "java",
+            "name": "JavaMethodOverloading",
+            "request": "launch",
+            "mainClass": "com.oops.java_polymorphism.method_overloading.JavaMethodOverloading",
+            "projectName": "oops-concepts"
+        },
+        {
+            "type": "java",
+            "name": "JavaThis",
+            "request": "launch",
+            "mainClass": "com.oops.java_this.JavaThis",
+            "projectName": "oops-concepts"
+        },
+        {
+            "type": "java",
+            "name": "JavaStatic",
+            "request": "launch",
+            "mainClass": "com.oops.java_static.JavaStatic",
+            "projectName": "oops-concepts"
+        },
+        {
+            "type": "java",
+            "name": "Department",
+            "request": "launch",
+            "mainClass": "com.oops.java_inheritance.aggregation.Department",
+            "projectName": "oops-concepts"
+        },
+        {
+            "type": "java",
+            "name": "Bank",
+            "request": "launch",
+            "mainClass": "Bank",
+            "projectName": "programming_ea845e90"
+        },
+        {
+            "type": "java",
+            "name": "Bank",
+            "request": "launch",
+            "mainClass": "programming.intermediate.java.oops.object.Bank",
+            "projectName": "programming_ea845e90"
+        },
+        {
+            "type": "java",
+            "name": "SwitchStatement",
+            "request": "launch",
+            "mainClass": "SwitchStatement",
+            "projectName": "programming_ea845e90"
+        },
+        {
+            "type": "java",
+            "name": "Loop",
+            "request": "launch",
+            "mainClass": "Loop",
+            "projectName": "programming_ea845e90"
+        },
+        {
+            "type": "java",
+            "name": "Switch",
+            "request": "launch",
+            "mainClass": "Switch",
+            "projectName": "programming_ea845e90"
+        },
+        {
+            "type": "java",
+            "name": "Loop",
+            "request": "launch",
+            "mainClass": "programming.basic.java.loop.Loop",
+            "projectName": "programming_ea845e90"
+        },
+        {
+            "type": "java",
+            "name": "ControlStatement",
+            "request": "launch",
+            "mainClass": "ControlStatement",
+            "projectName": "programming_ea845e90"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}
