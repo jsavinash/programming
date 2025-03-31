@@ -23,7 +23,7 @@ class CircularHeaderLinkedListIterator<Item> implements Iterator<Item> {
         if (!hasNext()) {
             throw new NoSuchElementException("No item found");
         }
-        final var data = this.currentNode.getData();
+        Item data = this.currentNode.getData();
         this.currentNode = currentNode.getNext();
         this.currentSize--;
         return data;

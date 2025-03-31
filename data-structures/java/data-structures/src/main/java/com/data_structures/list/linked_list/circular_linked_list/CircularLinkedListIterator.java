@@ -25,7 +25,7 @@ class CircularLinkedListIterator<Item> implements Iterator<Item> {
         if (!hasNext()) {
             throw new NoSuchElementException("No item found");
         }
-        final var data = currentNode.getData();
+        Item data = currentNode.getData();
         currentNode = currentNode.getNext();
         currentSize--;
         return data;

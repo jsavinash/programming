@@ -18,7 +18,7 @@ class SinglyLinkedListIterator<Item> implements Iterator<Item> {
         if (!hasNext()) {
             throw new NoSuchElementException("No item found");
         }
-        final var data = currentNode.data;
+        Item data = currentNode.data;
         currentNode = currentNode.next;
         return data;
     }
