@@ -51,6 +51,7 @@ class SinglyLinkedList(ISinglyLinkedList):
 
 singlyLinkedList = SinglyLinkedList()
 singlyLinkedList.addNode(1)
+singlyLinkedList.addNode(2)
 iterator = iter(singlyLinkedList)
 print(next(iterator))
 print(next(iterator))
