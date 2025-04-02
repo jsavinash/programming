@@ -1,4 +1,4 @@
-from src.list.linked_list.doubly_linked_list.IDoublyLinkedListNode import IDoublyLinkedListNode
+from src.list.linked_list.doubly_linked_list.interface.IDoublyLinkedListNode import IDoublyLinkedListNode
 
 
 class DoublyLinkedListNode(IDoublyLinkedListNode):

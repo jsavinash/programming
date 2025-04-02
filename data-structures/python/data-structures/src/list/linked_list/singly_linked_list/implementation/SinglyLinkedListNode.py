@@ -1,4 +1,4 @@
-from src.list.linked_list.singly_linked_list.ISinglyLinkedListNode import ISinglyLinkedListNode
+from src.list.linked_list.singly_linked_list.interface.ISinglyLinkedListNode import ISinglyLinkedListNode
 
 
 class SinglyLinkedListNode(ISinglyLinkedListNode):

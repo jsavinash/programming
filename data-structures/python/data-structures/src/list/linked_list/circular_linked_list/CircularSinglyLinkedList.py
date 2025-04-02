@@ -1,8 +1,8 @@
-from src.list.linked_list.singly_linked_list.interface.ISinglyLinkedList import ISinglyLinkedList
-from src.list.linked_list.singly_linked_list.implementation.SinglyLinkedListNode import SinglyLinkedListNode
+from src.list.linked_list.circular_linked_list.interface.ICircularSinglyLinkedList import ICircularSinglyLinkedList
+from src.list.linked_list.circular_linked_list.implementation.SinglyLinkedListNode import SinglyLinkedListNode
 
 
-class SinglyLinkedList(ISinglyLinkedList):
+class CircularSinglyLinkedList(ICircularSinglyLinkedList):
     def __init__(self):
         self._head = None
         self._tail = None
@@ -30,6 +30,7 @@ class SinglyLinkedList(ISinglyLinkedList):
         else:
             self.tail.next = newNode
             self.tail = newNode
+        self.tail.next = self.head
 
     def remove_data(self, data):
         tempHead = self.head
@@ -42,9 +43,12 @@ class SinglyLinkedList(ISinglyLinkedList):
 
     def print_nodes(self):
         tempHead = self.head;
-        while tempHead != None:
+        while tempHead is not None:
             print(tempHead.data)
-            tempHead = tempHead.next
+            if tempHead.next == self.head:
+                tempHead = None
+            else:
+                tempHead = tempHead.next
 
     def __iter__(self):
         self.tempHead = self.head
@@ -54,14 +58,20 @@ class SinglyLinkedList(ISinglyLinkedList):
         currentValue = None
         if self.tempHead is not None:
             currentValue = self.tempHead.data
-            self.tempHead = self.tempHead.next
+            if self.tempHead.next == self.head:
+                self.tempHead = None
+            else:
+                self.tempHead = self.tempHead.next
         return currentValue
 
 
-singlyLinkedList = SinglyLinkedList()
-singlyLinkedList.add_data(1)
-singlyLinkedList.add_data(2)
-singlyLinkedList.remove_data(2)
-iterator = iter(singlyLinkedList)
+circularSinglyLinkedList = CircularSinglyLinkedList()
+circularSinglyLinkedList.add_data(1)
+circularSinglyLinkedList.add_data(2)
+circularSinglyLinkedList.add_data(3)
+# circularSinglyLinkedList.remove_data(2)
+iterator = iter(circularSinglyLinkedList)
+print(next(iterator))
+print(next(iterator))
 print(next(iterator))
 print(next(iterator))
