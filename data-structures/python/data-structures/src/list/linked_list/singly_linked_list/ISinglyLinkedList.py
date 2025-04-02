@@ -23,9 +23,13 @@ class ISinglyLinkedList(ABC):
         pass
 
     @abstractmethod  # Decorator to define an abstract method
-    def addNode(self, data):
+    def add_data(self, data):
         pass
 
     @abstractmethod  # Decorator to define an abstract method
-    def printNodes(self):
+    def remove_data(self, data):
+        pass
+
+    @abstractmethod  # Decorator to define an abstract method
+    def print_nodes(self):
         pass

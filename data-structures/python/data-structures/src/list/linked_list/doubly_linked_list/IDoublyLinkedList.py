@@ -27,9 +27,13 @@ class IDoublyLinkedList(ABC):
         pass
 
     @abstractmethod
-    def addNode(self):
+    def add_data(self):
         pass
 
     @abstractmethod
-    def printNodes(self):
+    def remove_data(self, data):
+        pass
+
+    @abstractmethod
+    def print_nodes(self):
         pass

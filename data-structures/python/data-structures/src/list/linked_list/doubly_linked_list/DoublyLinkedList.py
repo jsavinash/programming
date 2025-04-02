@@ -31,17 +31,26 @@ class DoublyLinkedList(IDoublyLinkedList):
     def tail(self):
         del self._tail
 
-    def addNode(self, data):
+    def add_data(self, data):
         newNode = DoublyLinkedListNode(data, None, None)
         if self.head is None:
-            self._head = self._tail = newNode
+            self.head = self.tail = newNode
         else:
-            tempNode = self._tail
-            self._tail.next = newNode
+            tempNode = self.tail
+            self.tail.next = newNode
             newNode.prev = tempNode
-            self._tail = newNode
+            self.tail = newNode
 
-    def printNodes(self):
+    def remove_data(self, data):
+        tempHead = self.head
+        self.head = None
+        self.tail = None
+        while tempHead is not None:
+            if tempHead.data != data:
+                self.add_data(tempHead.data)
+            tempHead = tempHead.next
+
+    def print_nodes(self):
         tempRef = self.head
         while tempRef is not None:
             print(tempRef.data)
@@ -60,8 +69,9 @@ class DoublyLinkedList(IDoublyLinkedList):
 
 
 doublyLinkedList = DoublyLinkedList()
-doublyLinkedList.addNode(1)
-doublyLinkedList.addNode(2)
+doublyLinkedList.add_data(1)
+doublyLinkedList.add_data(2)
+doublyLinkedList.add_data(1)
 iterator = iter(doublyLinkedList)
 print(next(iterator))
 print(next(iterator))

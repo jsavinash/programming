@@ -23,7 +23,7 @@ class SinglyLinkedList(ISinglyLinkedList):
     def tail(self, val):
         self._tail = val
 
-    def addNode(self, data):
+    def add_data(self, data):
         newNode = SinglyLinkedListNode(data)
         if self.head == None:
             self.head = self.tail = newNode
@@ -31,7 +31,16 @@ class SinglyLinkedList(ISinglyLinkedList):
             self.tail.next = newNode
             self.tail = newNode
 
-    def printNodes(self):
+    def remove_data(self, data):
+        tempHead = self.head
+        self.head = None
+        self.tail = None
+        while tempHead is not None:
+            if tempHead.data != data:
+                self.add_data(tempHead.data)
+            tempHead = tempHead.next
+
+    def print_nodes(self):
         tempHead = self.head;
         while tempHead != None:
             print(tempHead.data)
@@ -50,8 +59,9 @@ class SinglyLinkedList(ISinglyLinkedList):
 
 
 singlyLinkedList = SinglyLinkedList()
-singlyLinkedList.addNode(1)
-singlyLinkedList.addNode(2)
+singlyLinkedList.add_data(1)
+singlyLinkedList.add_data(2)
+singlyLinkedList.remove_data(2)
 iterator = iter(singlyLinkedList)
 print(next(iterator))
 print(next(iterator))
