@@ -1,4 +1,4 @@
-from src.list.linked_list.circular_linked_list.interface.ISinglyLinkedListNode import ISinglyLinkedListNode
+from src.list.linked_list.circular_linked_list.interface.ISingly_Linked_List_Node import ISinglyLinkedListNode
 
 
 class SinglyLinkedListNode(ISinglyLinkedListNode):

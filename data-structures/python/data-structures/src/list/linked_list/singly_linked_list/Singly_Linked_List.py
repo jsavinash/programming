@@ -1,5 +1,5 @@
-from src.list.linked_list.singly_linked_list.interface.ISinglyLinkedList import ISinglyLinkedList
-from src.list.linked_list.singly_linked_list.implementation.SinglyLinkedListNode import SinglyLinkedListNode
+from src.list.linked_list.singly_linked_list.interface.ISingly_Linked_List import ISinglyLinkedList
+from src.list.linked_list.singly_linked_list.implementation.Singly_Linked_List_Node import SinglyLinkedListNode
 
 
 class SinglyLinkedList(ISinglyLinkedList):
