@@ -1,5 +1,5 @@
 from src.list.linked_list.circular_linked_list.interface.ICircular_Singly_Linked_List import ICircularSinglyLinkedList
-from src.list.linked_list.circular_linked_list.implementation.Singly_Linked_List_Node import SinglyLinkedListNode
+from src.list.linked_list.singly_linked_list.implementation.Singly_Linked_List_Node import SinglyLinkedListNode
 
 
 class CircularSinglyLinkedList(ICircularSinglyLinkedList):

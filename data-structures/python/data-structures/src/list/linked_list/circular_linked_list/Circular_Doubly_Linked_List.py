@@ -1,5 +1,5 @@
 from src.list.linked_list.circular_linked_list.interface.ICircular_Doubly_Linked_List import ICircularDoublyLinkedList
-from src.list.linked_list.circular_linked_list.implementation.Doubly_Linked_List_Node import DoublyLinkedListNode
+from src.list.linked_list.doubly_linked_list.implementation.Doubly_Linked_List_Node import DoublyLinkedListNode
 
 
 class CircularDoublyLinkedList(ICircularDoublyLinkedList):
