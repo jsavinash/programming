@@ -1,11 +1,7 @@
 from abc import ABC
 
 
-# Skip list condition as follows :-
-# 1) Shorted list
-
-class ISkipList(ABC):
-
+class IMultiLinkedList(ABC):
     @property
     def head(self):
         return
@@ -18,5 +14,14 @@ class ISkipList(ABC):
     def head(self):
         pass
 
-    def add_data(self, val):
+    @property
+    def tail(self):
+        return
+
+    @tail.setter
+    def tail(self, val):
+        pass
+
+    @tail.deleter
+    def tail(self):
         pass

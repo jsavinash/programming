@@ -41,10 +41,11 @@ class SinglyLinkedList(ISinglyLinkedList):
             tempHead = tempHead.next
 
     def print_nodes(self):
-        tempHead = self.head;
-        while tempHead != None:
-            print(tempHead.data)
-            tempHead = tempHead.next
+        temp_head = self.head;
+        while temp_head is not None:
+            print(f"{temp_head.data} => ", end="")
+            temp_head = temp_head.next
+        print("")
 
     def __iter__(self):
         self.tempHead = self.head
