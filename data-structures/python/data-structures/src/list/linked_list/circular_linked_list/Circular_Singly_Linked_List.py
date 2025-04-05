@@ -24,45 +24,45 @@ class CircularSinglyLinkedList(ICircularSinglyLinkedList):
         self._tail = val
 
     def add_data(self, data):
-        newNode = SinglyLinkedListNode(data)
-        if self.head == None:
-            self.head = self.tail = newNode
+        new_node = SinglyLinkedListNode(data)
+        if self.head is None:
+            self.head = self.tail = new_node
         else:
-            self.tail.next = newNode
-            self.tail = newNode
-        self.tail.next = self.head
+            self.tail.next = new_node
+            self.tail = new_node
+            self.tail.next = self.head
 
     def remove_data(self, data):
-        tempHead = self.head
+        temp_head = self.head
         self.head = None
         self.tail = None
-        while tempHead is not None:
-            if tempHead.data != data:
-                self.add_data(tempHead.data)
-            tempHead = tempHead.next
+        while temp_head is not None:
+            if temp_head.data != data:
+                self.add_data(temp_head.data)
+            temp_head = temp_head.next
 
     def print_nodes(self):
-        tempHead = self.head;
-        while tempHead is not None:
-            print(tempHead.data)
-            if tempHead.next == self.head:
-                tempHead = None
+        temp_head = self.head;
+        while temp_head is not None:
+            print(temp_head.data)
+            if temp_head.next == self.head:
+                temp_head = None
             else:
-                tempHead = tempHead.next
+                temp_head = temp_head.next
 
     def __iter__(self):
-        self.tempHead = self.head
+        self.temp_head = self.head
         return self
 
     def __next__(self):
-        currentValue = None
-        if self.tempHead is not None:
-            currentValue = self.tempHead.data
-            if self.tempHead.next == self.head:
-                self.tempHead = None
+        current_value = None
+        if self.temp_head is not None:
+            current_value = self.temp_head.data
+            if self.temp_head.next == self.head:
+                self.temp_head = None
             else:
-                self.tempHead = self.tempHead.next
-        return currentValue
+                self.temp_head = self.temp_head.next
+        return current_value
 
 
 circularSinglyLinkedList = CircularSinglyLinkedList()
