@@ -1,4 +1,3 @@
-from src.list.linked_list.singly_linked_list.Singly_Linked_List import SinglyLinkedList
 from src.list.linked_list.all_problem.detect_circular_in_linked_list.Detect_Circular_In_Linked_List import \
     DetectCircularInLinkedListInSinglyLinkedList
 
