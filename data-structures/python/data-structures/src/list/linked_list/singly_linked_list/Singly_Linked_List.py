@@ -24,21 +24,21 @@ class SinglyLinkedList(ISinglyLinkedList):
         self._tail = val
 
     def add_data(self, data):
-        newNode = SinglyLinkedListNode(data)
-        if self.head == None:
-            self.head = self.tail = newNode
+        new_node = SinglyLinkedListNode(data)
+        if self.head is None:
+            self.head = self.tail = new_node
         else:
-            self.tail.next = newNode
-            self.tail = newNode
+            self.tail.next = new_node
+            self.tail = new_node
 
     def remove_data(self, data):
-        tempHead = self.head
+        temp_head = self.head
         self.head = None
         self.tail = None
-        while tempHead is not None:
-            if tempHead.data != data:
-                self.add_data(tempHead.data)
-            tempHead = tempHead.next
+        while temp_head is not None:
+            if temp_head.data != data:
+                self.add_data(temp_head.data)
+            temp_head = temp_head.next
 
     def print_nodes(self):
         temp_head = self.head;
@@ -52,11 +52,11 @@ class SinglyLinkedList(ISinglyLinkedList):
         return self
 
     def __next__(self):
-        currentValue = None
+        current_value = None
         if self.tempHead is not None:
-            currentValue = self.tempHead.data
+            current_value = self.tempHead.data
             self.tempHead = self.tempHead.next
-        return currentValue
+        return current_value
 
 
 singlyLinkedList = SinglyLinkedList()
