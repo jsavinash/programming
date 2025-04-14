@@ -7,28 +7,39 @@ class PartitioningLinkedListByGivenValue(SinglyLinkedList):
         temp_head = self.head
         temp_list = None
         temp_list_2 = None
+        temp_list_3 = None
         head_ref = None
         head_ref_2 = None
+        head_ref_3 = None
         while temp_head is not None:
             new_node = SinglyLinkedListNode(temp_head.data)
-            if temp_head.data <= x:
+            if temp_head.data < x:
                 if temp_list is None:
                     head_ref = temp_list = new_node
                 else:
                     temp_list.next = new_node
                     temp_list = new_node
-            else:
+            elif temp_head.data == x:
                 if temp_list_2 is None:
                     head_ref_2 = temp_list_2 = new_node
                 else:
                     temp_list_2.next = new_node
-                    temp_list_2 = temp_list_2
+                    temp_list_2 = new_node
+            else:
+                if temp_list_3 is None:
+                    head_ref_3 = temp_list_3 = new_node
+                else:
+                    temp_list_3.next = new_node
+                    temp_list_3 = temp_list_3
             temp_head = temp_head.next
         if temp_list is not None:
             temp_list.next = head_ref_2
+        if temp_list_2 is not None:
+            temp_list_2.next = head_ref_3
         self.head = head_ref
 
-#1 -> 4 -> 3 -> 2 -> 5 -> 2 -> 3, x = 3
+
+# 1 -> 4 -> 3 -> 2 -> 5 -> 2 -> 3, x = 3
 partitioningLinkedListByGivenValue = PartitioningLinkedListByGivenValue()
 partitioningLinkedListByGivenValue.add_data(1)
 partitioningLinkedListByGivenValue.add_data(4)
@@ -39,4 +50,3 @@ partitioningLinkedListByGivenValue.add_data(2)
 partitioningLinkedListByGivenValue.add_data(3)
 partitioningLinkedListByGivenValue.partition_linked_list(3)
 partitioningLinkedListByGivenValue.print_nodes()
-
