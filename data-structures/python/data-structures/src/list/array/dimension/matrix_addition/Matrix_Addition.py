@@ -32,8 +32,7 @@ class MatrixAddition:
         return LHS == RHS == matrix
 
         # Additive Identity Property of Matrix Addition
-        # A + O = A = O + A
-
+        # A + (-A) = O
     def additive_inverse_property_of_matrix_addition(self, matrix, inverse_matrix, identity_matrix):
         sum = self.add_square_matrix(matrix, inverse_matrix)
         return sum == identity_matrix
