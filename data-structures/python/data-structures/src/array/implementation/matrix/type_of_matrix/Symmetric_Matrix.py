@@ -1,5 +1,5 @@
 # Normal matrix with m(Row) x n(Column). 
-# Symmetric or skew symmetric matrix : When matrix equal to transpose of matrix itself.
+# Symmetric matrix : When matrix equal to transpose of matrix itself.
 # Formula :- A = A(T)
 
 class SymmetricMatrix:
