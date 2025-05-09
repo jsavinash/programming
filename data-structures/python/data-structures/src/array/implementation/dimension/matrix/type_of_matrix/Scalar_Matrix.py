@@ -1,8 +1,10 @@
+# Matrix with m(Row) x n(Column). 
+# Scalar matrix : Multiple identity matrix with constant number to get scalar vector.
+# scalar matrix  = (constant X identity matrix)
 class ScalarMatrix:
-    def scalar_matrix(self):  # Diagonal element must be same and remaining element zeros.
+    def scalar_matrix(self):
         return [[2, 0, 0], [0, 2, 0], [0, 0, 2]]
-
-    # Constant X identity matrix = scalar matrix
+    
 
     def print(self, matrix):
         print("[")

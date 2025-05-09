@@ -1,6 +1,8 @@
+# Matrix with m(Row) x n(Column). 
+# Singleton matrix : Matrix that have one element.
 class SingletonMatrix:
     def singleton_matrix(self):
-        return [1]  # Array that have single element is called singleton matrix.
+        return [1]  
 
     def print(self, matrix):
         print(matrix)

@@ -1,4 +1,5 @@
-# Null or Zero matrix
+# Matrix with m(Row) x n(Column). 
+# Singleton matrix : Matrix that have all element zero.
 class NullMatrix:
     def null_matrix(self):
         return [0, 0, 0, 0]

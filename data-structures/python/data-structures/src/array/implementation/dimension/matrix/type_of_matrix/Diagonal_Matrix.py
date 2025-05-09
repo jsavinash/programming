@@ -1,3 +1,5 @@
+# Matrix with m(Row) x n(Column). 
+# Diagonal matrix : Accept principal diagonal element of matrix are not zero, rest all are zero.
 class DiagonalMatrix:
     def diagonal_matrix(self):
         return [[1, 0, 0, 0], [0, 3, 0, 0], [0, 0, 8, 0], [0, 0, 0, 9]]

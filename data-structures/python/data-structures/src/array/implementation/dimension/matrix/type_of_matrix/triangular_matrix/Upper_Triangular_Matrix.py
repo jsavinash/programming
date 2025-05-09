@@ -1,3 +1,5 @@
+# Matrix with m(Row) x n(Column). 
+#Uppper Triangular Matrix : Where all lower element from principal diagonal are zero, rest are non - zero.
 class UpperTriangularMatrix:
     def upper_triangular_matrix(self):
         return [[1, 0, 0, 0], [2, 1, 0, 0], [4, 3, 1, 0], [3, 2, 1, 3]]

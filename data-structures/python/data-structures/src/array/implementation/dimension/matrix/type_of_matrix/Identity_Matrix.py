@@ -1,8 +1,8 @@
+# Matrix with m(Row) x n(Column). 
+# Identity matrix : Digonal element are same, rest all element ares zero.
 class IdentityMatrix:
-    def identity_matrix(self):  # Diagonal element must be same and remaining element zeros.
+    def identity_matrix(self):  
         return [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
-
-    # Constant X identity matrix = scalar matrix
 
     def print(self, matrix):
         print("[")

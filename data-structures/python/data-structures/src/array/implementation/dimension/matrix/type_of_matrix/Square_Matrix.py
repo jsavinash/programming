@@ -1,3 +1,5 @@
+# Matrix with m(Row) x n(Column) 
+# Square matrix : Where m and n are equal.
 class SquareMatrix:
     def square_matrix(self):
         return [[1, 2], [3, 4]]  # 2 X 2

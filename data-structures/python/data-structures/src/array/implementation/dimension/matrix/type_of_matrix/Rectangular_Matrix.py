@@ -1,3 +1,5 @@
+# Matrix with m(Row) x n(Column) 
+# Rectangular Matrix : Where m and n are not equal.
 class RectangularMatrix:
     def rectangular_matrix(self):
         return [[1, 2], [3, 4], [5, 6], [7, 8]]  # 4 X 2
