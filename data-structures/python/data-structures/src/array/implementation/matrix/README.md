@@ -1,2 +1,2 @@
 # Matrix
-![alt text](../../../../../../assets/svg/Matrix.svg "Title")
+![alt text](../../../../../../assets/svg/Matrix.svg "Matrix")
