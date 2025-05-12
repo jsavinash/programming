@@ -9,6 +9,7 @@ public class DoublyLinkedListNode<T> implements IDoublyLinkedListNode<T> {
     public DoublyLinkedListNode(T data) {
         this.data = data;
         this.next = null;
+        this.prev = null;
     }
 
     public DoublyLinkedListNode(T data, IDoublyLinkedListNode<T> next) {
