@@ -3,13 +3,13 @@ package com.data_structures_2.queue.simple_queue.input_restricted_queue.singly_l
 import com.data_structures_2.list.singly_linked_list.SinglyLinkedListNode;
 import com.data_structures_2.list.singly_linked_list.ISinglyLinkedListNode;
 
-public class SinglyLinkedListOutputRestrictedQueue<T> implements ISinglyLinkedListOutputRestrictedQueue<T> {
+public class SinglyLinkedListInputRestrictedQueue<T> implements ISinglyLinkedListInputRestrictedQueue<T> {
     ISinglyLinkedListNode<T> front = null;
     ISinglyLinkedListNode<T> rear = null;
     int maxCounter;
     int currentCounter;
 
-    SinglyLinkedListOutputRestrictedQueue(int data) {
+    SinglyLinkedListInputRestrictedQueue(int data) {
         this.maxCounter = data;
         this.currentCounter = 0;
     }
@@ -74,7 +74,7 @@ public class SinglyLinkedListOutputRestrictedQueue<T> implements ISinglyLinkedLi
     }
 
     public static void main(String args[]) {
-        SinglyLinkedListOutputRestrictedQueue<Integer> obj = new SinglyLinkedListOutputRestrictedQueue<Integer>(5);
+        SinglyLinkedListInputRestrictedQueue<Integer> obj = new SinglyLinkedListInputRestrictedQueue<Integer>(5);
         try {
             obj.rearEnqueue(1);
             obj.rearEnqueue(2);
