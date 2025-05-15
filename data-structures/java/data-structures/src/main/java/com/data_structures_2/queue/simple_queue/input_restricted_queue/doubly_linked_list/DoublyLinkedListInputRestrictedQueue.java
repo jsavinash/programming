@@ -9,7 +9,6 @@ public class DoublyLinkedListInputRestrictedQueue<T> implements IDoublyLinkedLis
     private Integer maxNodeCount = 0;
     private Integer currentNodeCount = 0;
 
-
     DoublyLinkedListInputRestrictedQueue(int data) {
         this.maxNodeCount = data;
         this.currentNodeCount = 0;
@@ -27,6 +26,7 @@ public class DoublyLinkedListInputRestrictedQueue<T> implements IDoublyLinkedLis
         }
     }
 
+    @Override
     public void rearEnqueue(T data) throws Exception {
         this.isQueueFull();
         DoublyLinkedListNode<T> newNode = new DoublyLinkedListNode<>(data);
@@ -40,13 +40,14 @@ public class DoublyLinkedListInputRestrictedQueue<T> implements IDoublyLinkedLis
         this.currentNodeCount++;
     }
 
-
+    @Override
     public void rearDequeue() throws Exception {
         this.isQueueEmpty();
         this.rear = this.rear.getNext();
         this.currentNodeCount--;
     }
 
+    @Override
     public void frontDequeue() throws Exception {
         this.isQueueEmpty();
         IDoublyLinkedListNode<T> tempNode = this.rear;
@@ -67,6 +68,7 @@ public class DoublyLinkedListInputRestrictedQueue<T> implements IDoublyLinkedLis
         this.currentNodeCount--;
     }
 
+    @Override
     public void printQueue() {
         IDoublyLinkedListNode<T> tempNode = this.rear;
         StringBuffer str = new StringBuffer();
