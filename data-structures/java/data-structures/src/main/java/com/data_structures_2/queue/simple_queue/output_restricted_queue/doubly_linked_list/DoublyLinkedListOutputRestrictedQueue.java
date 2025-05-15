@@ -14,16 +14,14 @@ public class DoublyLinkedListOutputRestrictedQueue<T> implements IDoublyLinkedLi
         this.currentNodeCount = 0;
     }
 
-    @Override
-    public void isQueueEmpty() throws Exception {
+    private void isQueueEmpty() throws Exception {
         if (this.currentNodeCount == 0) {
             throw new Exception("Queue is empty");
         }
     }
 
 
-    @Override
-    public void isQueueFull() throws Exception {
+    private void isQueueFull() throws Exception {
         if (this.currentNodeCount >= this.nodeCount) {
             throw new Exception("Queue is full");
         }

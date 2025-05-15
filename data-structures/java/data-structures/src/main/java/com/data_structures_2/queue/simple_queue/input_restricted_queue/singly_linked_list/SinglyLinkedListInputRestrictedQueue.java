@@ -6,45 +6,46 @@ import com.data_structures_2.list.singly_linked_list.ISinglyLinkedListNode;
 public class SinglyLinkedListInputRestrictedQueue<T> implements ISinglyLinkedListInputRestrictedQueue<T> {
     ISinglyLinkedListNode<T> front = null;
     ISinglyLinkedListNode<T> rear = null;
-    int maxCounter;
-    int currentCounter;
+    private Integer maxNodeCount = 0;
+    private Integer currentNodeCount = 0;
 
     SinglyLinkedListInputRestrictedQueue(int data) {
-        this.maxCounter = data;
-        this.currentCounter = 0;
+        this.maxNodeCount = data;
     }
 
-    public void rearEnqueue(T data) throws Exception {
-        if (this.currentCounter < this.maxCounter) {
-            SinglyLinkedListNode<T> newNode = new SinglyLinkedListNode<>(data);
-            if (this.rear == null && this.front == null) {
-                this.rear = this.front = newNode;
-            } else {
-                newNode.setNext(this.rear);
-                this.rear = newNode;
-            }
-            this.currentCounter++;
-        } else {
+    private void isQueueFull() throws Exception {
+        if (this.currentNodeCount == this.maxNodeCount) {
             throw new Exception("Queue is full");
         }
     }
 
-    public boolean isEmpty() {
-        return this.currentCounter == 0;
+    private void isQueueEmpty() throws Exception {
+        if (this.currentNodeCount == 0) {
+            throw new Exception("Queue is empty");
+        }
+    }
+
+    public void rearEnqueue(T data) throws Exception {
+        this.isQueueFull();
+        SinglyLinkedListNode<T> newNode = new SinglyLinkedListNode<>(data);
+        if (this.rear == null && this.front == null) {
+            this.rear = this.front = newNode;
+        } else {
+            newNode.setNext(this.rear);
+            this.rear = newNode;
+        }
+        this.currentNodeCount++;
+
     }
 
     public void rearDequeue() throws Exception {
-        if (this.isEmpty()) {
-            throw new Exception("Queue is empty");
-        }
+        this.isQueueEmpty();
         this.rear = this.rear.getNext();
-        this.currentCounter--;
+        this.currentNodeCount--;
     }
 
     public void frontDequeue() throws Exception {
-        if (this.isEmpty()) {
-            throw new Exception("Queue is empty");
-        }
+        this.isQueueEmpty();
         ISinglyLinkedListNode<T> tempNode = this.rear;
         ISinglyLinkedListNode<T> newRear = null;
         ISinglyLinkedListNode<T> newRearRef = null;
@@ -59,10 +60,10 @@ public class SinglyLinkedListInputRestrictedQueue<T> implements ISinglyLinkedLis
             tempNode = tempNode.getNext();
         }
         this.rear = newRearRef;
-        this.currentCounter--;
+        this.currentNodeCount--;
     }
 
-    String print() {
+    public void printQueue() {
         ISinglyLinkedListNode<T> tempNode = this.rear;
         StringBuffer str = new StringBuffer();
         while (tempNode != null) {
@@ -70,7 +71,7 @@ public class SinglyLinkedListInputRestrictedQueue<T> implements ISinglyLinkedLis
             tempNode = tempNode.getNext();
         }
         str = str.reverse();
-        return str.toString();
+        System.out.println(str.toString());
     }
 
     public static void main(String args[]) {
@@ -81,15 +82,15 @@ public class SinglyLinkedListInputRestrictedQueue<T> implements ISinglyLinkedLis
             obj.rearEnqueue(3);
             obj.rearEnqueue(4);
             obj.rearEnqueue(5);
-            System.out.println(obj.print());
+            obj.printQueue();
             obj.rearDequeue();
-            System.out.println(obj.print());
+            obj.printQueue();
             obj.frontDequeue();
-            System.out.println(obj.print());
+            obj.printQueue();
             obj.frontDequeue();
             obj.frontDequeue();
             obj.frontDequeue();
-            System.out.println(obj.print());
+            obj.printQueue();
         } catch (Exception e) {
             System.out.println(e);
         }

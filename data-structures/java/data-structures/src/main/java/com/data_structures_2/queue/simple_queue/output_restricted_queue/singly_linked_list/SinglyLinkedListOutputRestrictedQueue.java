@@ -25,6 +25,7 @@ public class SinglyLinkedListOutputRestrictedQueue<T> implements ISinglyLinkedLi
         }
     }
 
+    @Override
     public void rearEnqueue(T data) throws Exception {
         this.isQueueFull();
         ISinglyLinkedListNode<T> newNode = new SinglyLinkedListNode<>(data);
@@ -37,6 +38,7 @@ public class SinglyLinkedListOutputRestrictedQueue<T> implements ISinglyLinkedLi
         this.currentNodeCount++;
     }
 
+    @Override
     public void frontEnqueue(T data) throws Exception {
         this.isQueueFull();
         ISinglyLinkedListNode<T> newNode = new SinglyLinkedListNode<>(data);
@@ -49,6 +51,7 @@ public class SinglyLinkedListOutputRestrictedQueue<T> implements ISinglyLinkedLi
         this.currentNodeCount++;
     }
 
+    @Override
     public void frontDequeue() throws Exception {
         this.isQueueEmpty();
         ISinglyLinkedListNode<T> tempNode = this.rear;
@@ -57,7 +60,7 @@ public class SinglyLinkedListOutputRestrictedQueue<T> implements ISinglyLinkedLi
         ISinglyLinkedListNode<T> secondLastNode = null;
         while (tempNode.getNext() != null) {
             ISinglyLinkedListNode<T> newNode = new SinglyLinkedListNode<>(tempNode.getData());
-            if(newRear == null){
+            if (newRear == null) {
                 newRearRef = newRear = newNode;
             } else {
                 newRear.setNext(newNode);
@@ -71,6 +74,7 @@ public class SinglyLinkedListOutputRestrictedQueue<T> implements ISinglyLinkedLi
         this.currentNodeCount--;
     }
 
+    @Override
     public void printQueue() {
         StringBuffer sb = new StringBuffer();
         ISinglyLinkedListNode<T> tempNode = this.rear;
