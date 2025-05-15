@@ -89,7 +89,6 @@ public class SinglyLinkedListInputRestrictedQueue<T> implements ISinglyLinkedLis
             obj.frontDequeue();
             obj.frontDequeue();
             obj.frontDequeue();
-            obj.frontDequeue();
             System.out.println(obj.print());
         } catch (Exception e) {
             System.out.println(e);
