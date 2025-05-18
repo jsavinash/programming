@@ -6,7 +6,7 @@ import com.data_structures_2.list.singly_linked_list.SinglyLinkedListNode;
 public class SinglyLinkedListCircularQueue<T> implements ISinglyLinkedListCircularQueue<T> {
     private ISinglyLinkedListNode<T> front = null;
     private ISinglyLinkedListNode<T> rear = null;
-    private Integer maxNodeCount = 0;
+    private Integer maxNodeCount;
     private Integer currentNodeCount = 0;
 
     SinglyLinkedListCircularQueue(Integer maxNodeCount) {
@@ -20,7 +20,7 @@ public class SinglyLinkedListCircularQueue<T> implements ISinglyLinkedListCircul
     }
 
     private void isQueueFull() throws Exception {
-        if (this.currentNodeCount < this.maxNodeCount) {
+        if (this.currentNodeCount >= this.maxNodeCount) {
             throw new Exception("Queue is Full");
         }
     }
@@ -32,7 +32,7 @@ public class SinglyLinkedListCircularQueue<T> implements ISinglyLinkedListCircul
         if (this.front == null && this.rear == null) {
             this.front = this.rear = newNode;
         } else {
-            this.rear.setNext(newNode);
+            newNode.setNext(this.rear);
             this.rear = newNode;
             this.front.setNext(newNode);
         }
@@ -42,15 +42,40 @@ public class SinglyLinkedListCircularQueue<T> implements ISinglyLinkedListCircul
     @Override
     public void rearDequeue() throws Exception {
         this.isQueueEmpty();
+        this.rear = this.rear.getNext();
         this.currentNodeCount--;
     }
 
     @Override
     public void printQueue() throws Exception {
-
+        this.isQueueEmpty();
+        ISinglyLinkedListNode<T> rearRef = this.rear;
+        StringBuffer sb = new StringBuffer();
+        while (rearRef != null) {
+            sb.append(rearRef.getData() + " =< ");
+            if (rearRef == this.front) {
+                rearRef = null;
+            } else {
+                rearRef = rearRef.getNext();
+            }
+        }
+        sb.reverse();
+        System.out.println(sb);
     }
 
     public static void main(String args[]) {
-        SinglyLinkedListCircularQueue obj = new SinglyLinkedListCircularQueue(5);
+        SinglyLinkedListCircularQueue<Integer> obj = new SinglyLinkedListCircularQueue<Integer>(5);
+        try {
+            obj.rearEnqueue(1);
+            obj.rearEnqueue(2);
+            obj.rearEnqueue(3);
+            obj.rearEnqueue(4);
+            obj.rearEnqueue(5);
+            obj.printQueue();
+            obj.rearDequeue();
+            obj.printQueue();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 }
