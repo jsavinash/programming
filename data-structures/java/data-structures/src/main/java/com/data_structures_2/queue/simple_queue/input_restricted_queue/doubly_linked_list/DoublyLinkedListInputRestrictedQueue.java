@@ -81,6 +81,7 @@ public class DoublyLinkedListInputRestrictedQueue<T> implements IDoublyLinkedLis
     }
 
     public static void main(String args[]) {
+        System.out.println("***************** Doubly Linked List Input Restricted Queue *****************");
         DoublyLinkedListInputRestrictedQueue<Integer> obj = new DoublyLinkedListInputRestrictedQueue<Integer>(5);
         try {
             obj.rearEnqueue(1);

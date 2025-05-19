@@ -77,6 +77,7 @@ public class DoublyLinkedListOutputRestrictedQueue<T> implements IDoublyLinkedLi
     }
 
     public static void main(String args[]) {
+        System.out.println("***************** Doubly Linked List Output Restricted Queue *****************");
         DoublyLinkedListOutputRestrictedQueue<Integer> obj = new DoublyLinkedListOutputRestrictedQueue<>(5);
         try {
             obj.frontEnqueue(1);

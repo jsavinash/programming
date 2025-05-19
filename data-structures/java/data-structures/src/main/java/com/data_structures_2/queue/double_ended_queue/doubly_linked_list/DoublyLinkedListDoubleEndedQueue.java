@@ -1,15 +1,18 @@
-package com.data_structures_2.queue.double_ended_queue.singly_linked_list;
+package com.data_structures_2.queue.double_ended_queue.doubly_linked_list;
 
+import com.data_structures_2.list.doubly_linked_list.DoublyLinkedListNode;
+import com.data_structures_2.list.doubly_linked_list.IDoublyLinkedListNode;
 import com.data_structures_2.list.singly_linked_list.ISinglyLinkedListNode;
 import com.data_structures_2.list.singly_linked_list.SinglyLinkedListNode;
+import com.data_structures_2.queue.double_ended_queue.singly_linked_list.ISinglyLinkedListDoubleEndedQueue;
 
-public class SinglyLinkedListDoubleEndedQueue<T> implements ISinglyLinkedListDoubleEndedQueue<T> {
-    private ISinglyLinkedListNode<T> front = null;
-    private ISinglyLinkedListNode<T> rear = null;
+public class DoublyLinkedListDoubleEndedQueue<T> implements IDoublyLinkedListDoubleEndedQueue<T> {
+    private IDoublyLinkedListNode<T> front = null;
+    private IDoublyLinkedListNode<T> rear = null;
     private Integer maxNodeCount;
     private Integer currentNodeCount = 0;
 
-    SinglyLinkedListDoubleEndedQueue(Integer maxNodeCount) {
+    DoublyLinkedListDoubleEndedQueue(Integer maxNodeCount) {
         this.maxNodeCount = maxNodeCount;
     }
 
@@ -28,11 +31,12 @@ public class SinglyLinkedListDoubleEndedQueue<T> implements ISinglyLinkedListDou
 
     public void rearEnqueue(T data) throws Exception {
         this.isQueueFull();
-        ISinglyLinkedListNode<T> newNode = new SinglyLinkedListNode<>(data);
+        IDoublyLinkedListNode<T> newNode = new DoublyLinkedListNode<>(data);
         if (this.rear == null && this.front == null) {
             this.rear = this.front = newNode;
         } else {
             newNode.setNext(this.rear);
+            this.rear.setPrev(newNode);
             this.rear = newNode;
         }
         this.currentNodeCount++;
@@ -41,15 +45,17 @@ public class SinglyLinkedListDoubleEndedQueue<T> implements ISinglyLinkedListDou
     public void rearDequeue() throws Exception {
         this.isQueueEmpty();
         this.rear = this.rear.getNext();
+        this.rear.setPrev(null);
         this.currentNodeCount--;
     }
 
     public void frontEnqueue(T data) throws Exception {
         this.isQueueFull();
-        ISinglyLinkedListNode<T> newNode = new SinglyLinkedListNode<>(data);
+        IDoublyLinkedListNode<T> newNode = new DoublyLinkedListNode<>(data);
         if (this.rear == null && this.front == null) {
             this.rear = this.front = newNode;
         } else {
+            newNode.setPrev(this.front);
             this.front.setNext(newNode);
             this.front = newNode;
         }
@@ -58,17 +64,14 @@ public class SinglyLinkedListDoubleEndedQueue<T> implements ISinglyLinkedListDou
 
     public void frontDequeue() throws Exception {
         this.isQueueEmpty();
-        ISinglyLinkedListNode<T> rearRef = this.rear;
-        while (rearRef.getNext() != this.front) {
-            rearRef = rearRef.getNext();
-        }
-        rearRef.setNext(null);
-        this.front = rearRef;
+        this.front = this.front.getPrev();
+        this.front.setNext(null);
+        this.currentNodeCount--;
     }
 
     public void printQueue() throws Exception {
         this.isQueueEmpty();
-        ISinglyLinkedListNode<T> rearRef = this.rear;
+        IDoublyLinkedListNode<T> rearRef = this.rear;
         StringBuffer sb = new StringBuffer();
         while (rearRef != null) {
             sb.append(rearRef.getData() + " =< ");
@@ -79,7 +82,8 @@ public class SinglyLinkedListDoubleEndedQueue<T> implements ISinglyLinkedListDou
     }
 
     public static void main(String args[]) {
-        SinglyLinkedListDoubleEndedQueue<Integer> obj = new SinglyLinkedListDoubleEndedQueue(5);
+        System.out.println("***************** Doubly Linked List Double Ended Queue *****************");
+        DoublyLinkedListDoubleEndedQueue<Integer> obj = new DoublyLinkedListDoubleEndedQueue(5);
         try {
             obj.rearEnqueue(1);
             obj.rearEnqueue(2);

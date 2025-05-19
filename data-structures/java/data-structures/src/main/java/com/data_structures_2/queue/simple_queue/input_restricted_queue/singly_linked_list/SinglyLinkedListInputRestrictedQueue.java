@@ -79,6 +79,7 @@ public class SinglyLinkedListInputRestrictedQueue<T> implements ISinglyLinkedLis
     }
 
     public static void main(String args[]) {
+        System.out.println("***************** Singly Linked List Input Restricted Queue *****************");
         SinglyLinkedListInputRestrictedQueue<Integer> obj = new SinglyLinkedListInputRestrictedQueue<Integer>(5);
         try {
             obj.rearEnqueue(1);

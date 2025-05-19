@@ -66,11 +66,14 @@ public class SinglyLinkedListCircularQueue<T> implements ISinglyLinkedListCircul
     public static void main(String args[]) {
         SinglyLinkedListCircularQueue<Integer> obj = new SinglyLinkedListCircularQueue<Integer>(5);
         try {
+            System.out.println("***************** Singly Linked List Circular Queue *****************");
             obj.rearEnqueue(1);
             obj.rearEnqueue(2);
             obj.rearEnqueue(3);
             obj.rearEnqueue(4);
             obj.rearEnqueue(5);
+            obj.printQueue();
+            obj.rearDequeue();
             obj.printQueue();
             obj.rearDequeue();
             obj.printQueue();

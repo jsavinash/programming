@@ -70,6 +70,7 @@ public class DoublyLinkedListCircularQueue<T> implements IDoublyLinkedListCircul
     public static void main(String args[]) {
         DoublyLinkedListCircularQueue<Integer> obj = new DoublyLinkedListCircularQueue<Integer>(5);
         try {
+            System.out.println("***************** Doubly Linked List Circular Queue *****************");
             obj.rearEnqueue(1);
             obj.rearEnqueue(2);
             obj.rearEnqueue(3);
