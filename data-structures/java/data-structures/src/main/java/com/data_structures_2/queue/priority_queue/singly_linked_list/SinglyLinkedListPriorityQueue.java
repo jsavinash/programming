@@ -1,11 +1,11 @@
 package com.data_structures_2.queue.priority_queue.singly_linked_list;
 
-import com.data_structures_2.list.singly_linked_list.ISinglyLinkedListNode;
-import com.data_structures_2.list.singly_linked_list.SinglyLinkedListNode;
+import com.data_structures_2.queue.priority_queue.singly_linked_list.priority_queue_singly_linked_list_node.IPriorityQueueSinglyLinkedListNode;
+import com.data_structures_2.queue.priority_queue.singly_linked_list.priority_queue_singly_linked_list_node.PriorityQueueSinglyLinkedListNode;
 
 public class SinglyLinkedListPriorityQueue<T> implements ISinglyLinkedListPriorityQueue<T> {
-    private ISinglyLinkedListNode<T> front = null;
-    private ISinglyLinkedListNode<T> rear = null;
+    private IPriorityQueueSinglyLinkedListNode<T> front = null;
+    private IPriorityQueueSinglyLinkedListNode<T> rear = null;
     private Integer maxNodeCount;
     private Integer currentNodeCount = 0;
 
@@ -26,9 +26,9 @@ public class SinglyLinkedListPriorityQueue<T> implements ISinglyLinkedListPriori
     }
 
     @Override
-    public void frontEnqueue(T data) throws Exception {
+    public void frontEnqueue(T data, Integer priority) throws Exception {
         this.isQueueFull();
-        ISinglyLinkedListNode<T> newNode = new SinglyLinkedListNode<>(data);
+        IPriorityQueueSinglyLinkedListNode<T> newNode = new PriorityQueueSinglyLinkedListNode<>(data, priority);
         if (this.front == null && this.rear == null) {
             this.front = this.rear = newNode;
         } else {
@@ -39,9 +39,9 @@ public class SinglyLinkedListPriorityQueue<T> implements ISinglyLinkedListPriori
     }
 
     @Override
-    public void rearEnqueue(T data) throws Exception {
+    public void rearEnqueue(T data, Integer priority) throws Exception {
         this.isQueueFull();
-        ISinglyLinkedListNode<T> newNode = new SinglyLinkedListNode<>(data);
+        IPriorityQueueSinglyLinkedListNode<T> newNode = new PriorityQueueSinglyLinkedListNode<>(data, priority);
         if (this.front == null && this.rear == null) {
             this.front = this.rear = newNode;
         } else {
@@ -54,7 +54,7 @@ public class SinglyLinkedListPriorityQueue<T> implements ISinglyLinkedListPriori
     @Override
     public void frontDequeue() throws Exception {
         this.isQueueEmpty();
-        ISinglyLinkedListNode<T> rearRef = this.rear;
+        IPriorityQueueSinglyLinkedListNode<T> rearRef = this.rear;
         while (rearRef.getNext() != null) {
             rearRef = rearRef.getNext();
         }
@@ -72,7 +72,7 @@ public class SinglyLinkedListPriorityQueue<T> implements ISinglyLinkedListPriori
 
     @Override
     public void printQueue() {
-        ISinglyLinkedListNode<T> rearRef = this.rear;
+        IPriorityQueueSinglyLinkedListNode<T> rearRef = this.rear;
         StringBuffer sb = new StringBuffer();
         while (rearRef != null) {
             sb.append(rearRef.getData() + " =< ");
@@ -85,11 +85,11 @@ public class SinglyLinkedListPriorityQueue<T> implements ISinglyLinkedListPriori
     public static void main(String args[]) {
         SinglyLinkedListPriorityQueue<Integer> obj = new SinglyLinkedListPriorityQueue(5);
         try {
-            obj.rearEnqueue(1);
-            obj.frontEnqueue(2);
-            obj.rearEnqueue(3);
-            obj.frontEnqueue(4);
-            obj.rearEnqueue(5);
+            obj.rearEnqueue(10, 4);
+            obj.rearEnqueue(11, 5);
+            obj.rearEnqueue(12, 1);
+            obj.rearEnqueue(13, 8);
+            obj.rearEnqueue(14, 30);
             obj.printQueue();
         } catch (Exception e) {
             System.out.println(e);
