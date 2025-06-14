@@ -25,6 +25,20 @@ public class SinglyLinkedListPriorityQueue<T> implements ISinglyLinkedListPriori
         }
     }
 
+    private void bubbleSort() {
+        IPriorityQueueSinglyLinkedListNode<T> rearRef = this.rear;
+        IPriorityQueueSinglyLinkedListNode<T> rearRef2 = this.rear;
+        while (rearRef != null) {
+            Integer digit = (Integer) rearRef.getData();
+            while (rearRef2 != null) {
+                Integer digit2 = (Integer) rearRef2.getData();
+                if (digit > digit2){
+
+                }
+            }
+        }
+    }
+
     @Override
     public void frontEnqueue(T data, Integer priority) throws Exception {
         this.isQueueFull();
