@@ -1,11 +1,6 @@
-####  Dynamic programming :-  It's divide the problem into series of overlapping sub problems.
+##### Fibonacci Sequence :-First and second number 0 and 1 can be used to generate fibonacci number by keep on adding previous 2 number.
 
-> **Feature**
-> * Optimal sub-structure :- Optimal solution can be constructed from optimal solutions of its subproblems.
-> * Overlapping sub problems :- Problem can be broken down into sub problems which are reused several times
-
-> **Pro's**
-> * Always gives optimal solution
+**Example : 0 1 1 2 3 5 8 13 21**
 
 > **Approaches**
 > * Brute force `Complexity => Time : O(2^n) | Space : Unknown`
@@ -14,3 +9,5 @@
 > * Space optimization `Complexity => Time : O(n) | Space : O(1)`
 
 
+> **Brute force Approach**
+![My Project Logo](../../../../../../../../../assets/svg/FibonacciBruteForce.svg)
