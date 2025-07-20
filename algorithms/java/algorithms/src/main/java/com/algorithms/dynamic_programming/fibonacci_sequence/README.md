@@ -8,6 +8,7 @@
 > * Tabulation (Bottom-Up) `Complexity => Time : O(n) | Space : O(n)`
 > * Space optimization `Complexity => Time : O(n) | Space : O(1)`
 
+**Problem Statement** : Get nth fibonacci number
 
 > **Brute force Approach**
 > * ![My Project Logo](../../../../../../../../../assets/svg/FibonacciBruteForcex1.svg)
