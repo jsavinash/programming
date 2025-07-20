@@ -25,10 +25,42 @@ public class FrogJump {
         }
     }
 
+    double minimumEnergyRequiredForKthJump(int[] staircase, int idx, int k) {
+        if (idx == 0) {
+            return 0;
+        } else {
+            double minJump = Double.POSITIVE_INFINITY;
+            for (int i = 1; i <= k; i++) {
+                if (idx - i >= 0) {
+                    double jump = minimumEnergyRequiredForKthJump(staircase, idx - i, k) + Math.abs(staircase[idx] - staircase[idx - i]);
+                    minJump = Math.min(minJump, jump);
+                }
+            }
+            return minJump;
+        }
+    }
+
+    double maximumEnergyRequiredForKthJump(int[] staircase, int idx, int k) {
+        if (idx == 0) {
+            return 0;
+        } else {
+            double maxJump = Double.NEGATIVE_INFINITY;
+            for (int i = 1; i <= k; i++) {
+                if (idx - i >= 0) {
+                    double jump = maximumEnergyRequiredForKthJump(staircase, idx - i, k) + Math.abs(staircase[idx] - staircase[idx - i]);
+                    maxJump = Math.max(maxJump, jump);
+                }
+            }
+            return maxJump;
+        }
+    }
+
     public static void main(String args[]) {
         int[] staircase = {10, 20, 30, 10};
         FrogJump fj = new FrogJump();
         System.out.println(fj.minimumEnergyRequired(staircase, staircase.length - 1));
         System.out.println(fj.maximumEnergyRequired(staircase, staircase.length - 1));
+        System.out.println(fj.minimumEnergyRequiredForKthJump(staircase, staircase.length - 1, 3));
+        System.out.println(fj.maximumEnergyRequiredForKthJump(staircase, staircase.length - 1, 1));
     }
 }
