@@ -1,4 +1,4 @@
-##### Fibonacci Sequence :-First and second number 0 and 1 can be used to generate fibonacci number by keep on adding previous 2 number.
+### Fibonacci Sequence :-First and second number 0 and 1 can be used to generate fibonacci number by keep on adding previous 2 number.
 
 **Example : 0 1 1 2 3 5 8 13 21**
 
