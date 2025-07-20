@@ -2,7 +2,7 @@
 
 **Example : 0 1 1 2 3 5 8 13 21**
 
-**Problem Statement** : Get nth fibonacci number
+**Problem Statement** : Get nth fibonacci number, where n = 5.
 
 > **Approaches**
 > * Brute force `Complexity => Time : O(2^n) | Space : Unknown`
