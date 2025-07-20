@@ -10,4 +10,4 @@
 
 
 > **Brute force Approach**
-![My Project Logo](../../../../../../../../../assets/svg/FibonacciBruteForcex1.svg)
+> * ![My Project Logo](../../../../../../../../../assets/svg/FibonacciBruteForcex1.svg)
