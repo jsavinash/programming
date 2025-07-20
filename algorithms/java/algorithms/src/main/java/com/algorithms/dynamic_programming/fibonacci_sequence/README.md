@@ -17,3 +17,11 @@
 **Memoization (Top-Down) Approach**
 
 ![Memoization](../../../../../../../../../assets/svg/FibonacciMemoizationX1.svg)
+
+**Tabulation (Bottom-Up) Approach**
+
+![Tabulation](../../../../../../../../../assets/svg/FibonacciTabulationX1.svg)
+
+**Space Optimization (Three Pointer Approach)**
+
+![Space Optimization](../../../../../../../../../assets/svg/FibonacciThreePointerX1.svg)
