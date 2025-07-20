@@ -11,7 +11,7 @@
 > * Space optimization `Complexity => Time : O(n) | Space : O(1)`
 
 > **Brute force Approach**
-> * ![Brute force](../../../../../../../../../assets/svg/FibonacciBruteForcex1.svg)
+> ![Brute force](../../../../../../../../../assets/svg/FibonacciBruteForcex1.svg)
 
 > **Memoization (Top-Down) Approach**
-> * ![Memoization](../../../../../../../../../assets/svg/FibonacciMemoizationX1.svg)
+> ![Memoization](../../../../../../../../../assets/svg/FibonacciMemoizationX1.svg)
