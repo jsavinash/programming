@@ -29,14 +29,14 @@ public class FrogJump {
         if (idx == 0) {
             return 0;
         } else {
-            double minJump = Double.POSITIVE_INFINITY;
+            double minJumpEnergy = Double.POSITIVE_INFINITY;
             for (int i = 1; i <= k; i++) {
                 if (idx - i >= 0) {
                     double jump = minimumEnergyRequiredForKthJump(staircase, idx - i, k) + Math.abs(staircase[idx] - staircase[idx - i]);
-                    minJump = Math.min(minJump, jump);
+                    minJumpEnergy = Math.min(minJumpEnergy, jump);
                 }
             }
-            return minJump;
+            return minJumpEnergy;
         }
     }
 
@@ -44,14 +44,14 @@ public class FrogJump {
         if (idx == 0) {
             return 0;
         } else {
-            double maxJump = Double.NEGATIVE_INFINITY;
+            double maxJumpEnergy = Double.NEGATIVE_INFINITY;
             for (int i = 1; i <= k; i++) {
                 if (idx - i >= 0) {
                     double jump = maximumEnergyRequiredForKthJump(staircase, idx - i, k) + Math.abs(staircase[idx] - staircase[idx - i]);
-                    maxJump = Math.max(maxJump, jump);
+                    maxJumpEnergy = Math.max(maxJumpEnergy, jump);
                 }
             }
-            return maxJump;
+            return maxJumpEnergy;
         }
     }
 

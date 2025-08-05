@@ -51,7 +51,7 @@ public class FibonacciSequence {
         return dp[n]; // Recursion
     }
 
-    //Time Complexity : O(n)
+    //Time Complexity : O(1)
     //Space Complexity : O(1)
     int fibonacciSequenceThreePointer(int n) {
         int prePrev, prev, curr;

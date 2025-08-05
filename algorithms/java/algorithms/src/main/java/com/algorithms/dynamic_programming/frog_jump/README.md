@@ -1,14 +1,13 @@
-### Fibonacci Sequence :-First and second number 0 and 1 can be used to generate fibonacci number by keep on adding previous 2 number.
+### Jump with minimum energy consumption :- 
 
-**Example : 0 1 1 2 3 5 8 13 21**
+**Example : 30, 10, 60, 10, 60, 50**
 
-**Problem Statement** : Get nth fibonacci number, where n = 5.
+**Problem Statement** : Frog Jump
 
-> **Approaches**
-> * Brute force `Complexity => Time : O(2^n) | Space : Unknown`
-> * Memoization (Top-Down) `Complexity => Time : O(n) | Space : O(n)`
-> * Tabulation (Bottom-Up) `Complexity => Time : O(n) | Space : O(n)`
-> * Space optimization `Complexity => Time : O(n) | Space : O(1)`
+> **Recursion relation**
+> * Express everything in terms of index.
+> * Try all possible ways (Restriction :- Minimum energy).
+> * Take minimum of all possibilities.`
 
 **Brute force Approach**
 
@@ -22,3 +21,8 @@
 
 **Space Optimization (Three Pointer Approach)**
 
+> **Summary**
+> * Brute force `Complexity => Time : O(2^n) | Space : Unknown`
+> * Memoization (Top-Down) `Complexity => Time : O(n) | Space : O(n)`
+> * Tabulation (Bottom-Up) `Complexity => Time : O(n) | Space : O(n)`
+> * Space optimization `Complexity => Time : O(n) | Space : O(1)`
