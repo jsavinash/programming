@@ -1,4 +1,4 @@
-package com.algorithms.dynamic_programming.fibonacci_sequence;
+package com.algorithms.dynamic_programming.dp_on_number.fibonacci_sequence;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.algorithms.dynamic_programming.house_robber;
+package com.algorithms.dynamic_programming.n_dimension_array.house_robber;
 
 public class HouseRobber {
     //House Robber

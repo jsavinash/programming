@@ -12,16 +12,16 @@
 
 **Brute force Approach**
 
-![Brute force](../../../../../../../../../assets/svg/FibonacciBruteForcex1.svg)
+![Brute force](../../../../../../../../../../assets/svg/FibonacciBruteForcex1.svg)
 
 **Memoization (Top-Down) Approach**
 
-![Memoization](../../../../../../../../../assets/svg/FibonacciMemoizationX1.svg)
+![Memoization](../../../../../../../../../../assets/svg/FibonacciMemoizationX1.svg)
 
 **Tabulation (Bottom-Up) Approach**
 
-![Tabulation](../../../../../../../../../assets/svg/FibonacciTabulationX1.svg)
+![Tabulation](../../../../../../../../../../assets/svg/FibonacciTabulationX1.svg)
 
 **Space Optimization (Three Pointer Approach)**
 
-![Space Optimization](../../../../../../../../../assets/svg/FibonacciThreePointerX1.svg)
+![Space Optimization](../../../../../../../../../../assets/svg/FibonacciThreePointerX1.svg)

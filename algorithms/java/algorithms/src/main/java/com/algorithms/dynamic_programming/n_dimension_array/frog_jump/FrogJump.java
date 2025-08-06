@@ -1,4 +1,4 @@
-package com.algorithms.dynamic_programming.frog_jump;
+package com.algorithms.dynamic_programming.n_dimension_array.frog_jump;
 
 public class FrogJump {
     double minimumEnergyRequired(int[] staircase, int idx) {

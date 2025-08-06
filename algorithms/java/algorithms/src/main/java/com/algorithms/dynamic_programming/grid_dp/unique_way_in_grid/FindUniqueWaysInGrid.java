@@ -1,4 +1,4 @@
-package com.algorithms.dynamic_programming.grid_dp;
+package com.algorithms.dynamic_programming.grid_dp.unique_way_in_grid;
 
 public class FindUniqueWaysInGrid {
     int computeUniqueToPointInGrid(int row, int col) {

@@ -1,4 +1,4 @@
-package com.algorithms.dynamic_programming.grid_dp;
+package com.algorithms.dynamic_programming.grid_dp.minimum_path_sum;
 
 public class MinimumPathSum {
     int computeMinimumPathSumInGrid(int row, int col, int[][] grid) {

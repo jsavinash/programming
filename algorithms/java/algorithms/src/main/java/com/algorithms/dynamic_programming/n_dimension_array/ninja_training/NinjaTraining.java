@@ -1,4 +1,4 @@
-package com.algorithms.dynamic_programming.ninja_training;
+package com.algorithms.dynamic_programming.n_dimension_array.ninja_training;
 
 public class NinjaTraining {
     int computeNinjaTraining(int idx, int perviousJobIdx, int[][] arr) {

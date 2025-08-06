@@ -1,6 +1,6 @@
-package com.algorithms.dynamic_programming.longest_increasing_subsequence;
+package com.algorithms.dynamic_programming.dp_on_subsequence.longest_common_subsequence;
 
-public class LongestIncreasingSubsequence {
+public class LongestCommonSubsequence {
     int computeLongestIncreasingSubsequence(int idx, int prevIdx, int arr[], int n) {
         if (idx == n) {
             return 0;
@@ -13,7 +13,7 @@ public class LongestIncreasingSubsequence {
     }
 
     public static void main(String args[]) {
-        LongestIncreasingSubsequence lis = new LongestIncreasingSubsequence();
+        LongestCommonSubsequence lis = new LongestCommonSubsequence();
         int[] arr = {2, 5, 1};
         System.out.println(lis.computeLongestIncreasingSubsequence(0, -1, arr, arr.length));
     }

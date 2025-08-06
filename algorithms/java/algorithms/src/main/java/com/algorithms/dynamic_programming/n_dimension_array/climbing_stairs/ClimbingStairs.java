@@ -1,4 +1,4 @@
-package com.algorithms.dynamic_programming.one_dimension_array.climbing_stairs;
+package com.algorithms.dynamic_programming.n_dimension_array.climbing_stairs;
 
 public class ClimbingStairs {
     // 0 1 2 3
